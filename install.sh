@@ -8,3 +8,5 @@ touch ~/.bashrc
 if ! grep -qF 'nix-profile/etc/profile.d/nix.sh' ~/.bashrc; then
   echo "$NIX_LINE" >> ~/.bashrc
 fi
+
+mkdir -p ~/.config/nix && echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
